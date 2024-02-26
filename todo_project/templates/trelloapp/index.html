@@ -1,0 +1,17 @@
+{% extends 'trelloapp/base.html' %}
+
+{% block title %}
+My Tasks
+{% endblock %}
+
+{% block body %}
+    <center><h1>Task List</h1></center>
+    <center>
+        {% for lis in tasklist %}
+            <a href="{% url 'mytasks' lis.id %}"><h2> {{ lis.name }} </h2></a>
+            <h4> {{ lis.created_at }} </h4><br>
+        {% endfor %}
+        
+        <a href="{% url 'addtasklist' %}">Add new List</a>
+    </center>
+{% endblock %}

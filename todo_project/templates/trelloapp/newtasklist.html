@@ -1,0 +1,15 @@
+{% extends 'trelloapp/base.html' %}
+
+{% block title %} Create Tasks {% endblock %}
+
+{% block body %}
+<h1> Create Tasks </h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+<p>Task Name: <input name="listname" type="text"></p>
+<input type="submit" value = "Add Task">
+</form>
+<br>
+<a href="{% url 'index' %}">My Lists</a>
+{% endblock %}
