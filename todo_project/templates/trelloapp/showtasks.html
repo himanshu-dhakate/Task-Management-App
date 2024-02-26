@@ -59,6 +59,7 @@
     
     <h2><input type="checkbox" id="is_done" class="is_done_checkbox" name="is_done" data-task-id="{{ task.id }}" {% if task.isDone %}checked{% endif %}> {{task.name}} </h2>
     <h3>{{task.description}}</h3>
+    <h3>Priority: {{task.priority}}</h3>
     <h3>{{task.created_at}}</h3> <br>
 {% endfor %}
 

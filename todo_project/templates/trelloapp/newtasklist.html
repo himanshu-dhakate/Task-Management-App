@@ -3,13 +3,15 @@
 {% block title %} Create Tasks {% endblock %}
 
 {% block body %}
-<h1> Create Tasks </h1>
+<center>
+<h1> Create Task List </h1> <br>
 
 <form action="" method="POST">
     {% csrf_token %}
 <p>Task Name: <input name="listname" type="text"></p>
-<input type="submit" value = "Add Task">
+<input type="submit" value = "Add List">
 </form>
 <br>
 <a href="{% url 'index' %}">My Lists</a>
+</center>
 {% endblock %}

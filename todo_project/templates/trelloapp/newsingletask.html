@@ -3,7 +3,8 @@
 {% block title %} Add new Task {% endblock %}
 
 {% block body %} 
-
+<center>
+    <h1>Add Tasks</h1> <br>
 <form action="" method = 'POST'>
     {% csrf_token %}
 
@@ -11,5 +12,7 @@
 
     <input type="submit" value="Add Task">
 </form>
-
+<br>
+<a href="{% url 'index' %}">  Task List</a>
+</center>
 {% endblock %}
