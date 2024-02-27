@@ -4,6 +4,7 @@
 ```sh
 pip install -r requirements.txt
 ```
+- Install sqlite3 db
 - Inside the folder todo_project run
 ```sh
 python manage.py runserver
