@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pages',
     'trelloapp',
     'django.contrib.admin',
     'django.contrib.auth',

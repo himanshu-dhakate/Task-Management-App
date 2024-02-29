@@ -1,0 +1,24 @@
+{% extends 'pages/base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+
+<center>
+    <h1>Login</h1>
+    <form action="" method = "POST">
+        {% csrf_token %}
+        <p><input type="text" placeholder="Username" name = "username" id = "user"></p>
+        <p><input type="password" name="password" placeholder="Password" id = "pass"></p>
+        <input type="submit" name = "submit" value="Login"> <br> <br>
+        <a href="{% url 'register' %}">Register</a>
+    </form>
+
+    <br>
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %} 
+</center>
+
+
+{% endblock %}

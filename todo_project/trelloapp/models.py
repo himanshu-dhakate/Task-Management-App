@@ -1,11 +1,13 @@
 from django.db import models
 from django.utils.timezone import now
 from datetime import date
+from django.contrib.auth.models import User
 
 # TaskList model inside which there will be tasks
 class TaskList(models.Model):
     name = models.CharField(max_length = 50)
     created_at = models.DateField(default = date.today)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
 
     def __str__(self):
         return f"{self.name}--{self.created_at}"
