@@ -10,9 +10,16 @@
 
     {{ Form.as_p }}
 
-    <input type="submit" value="Add Task">
+    <input type="submit" value="Submit">
 </form>
 <br>
-<a href="{% url 'index' %}">  Task List</a>
+<a href="{% url 'index' %}">  Task List</a> <br> <br>
+
+
+{% if is_update %}
+
+<a href="{% url 'deletetask' taskid %}" style="color: white; background-color: red; padding: 5px 10px; text-decoration: none;"> DELETE </a>
+
+{% endif %}
 </center>
 {% endblock %}
