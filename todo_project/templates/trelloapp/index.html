@@ -5,6 +5,7 @@ My Tasks
 {% endblock %}
 
 {% block body %}
+    <div style="display: flex; justify-content: right;"> <a href="{% url 'logout' %}" style="background-color: aquamarine; padding: 5px 10px;"> logout </a> </div>
     <center><h1>Task List</h1></center>
     <center>
         {% for lis in tasklist %}
