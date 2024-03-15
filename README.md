@@ -4,8 +4,18 @@
 ```sh
 pip install -r requirements.txt
 ```
-- Install sqlite3 db
-- Inside the folder todo_project run
+- Install sqlite3 db (Optional)
+- Inside the folder todo_project run server
+```sh
+python manage.py runserver
+```
+- You will notice that db.sqlite3 file is created.
+- Migrate the models into the database.
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+- Run server again
 ```sh
 python manage.py runserver
 ```
