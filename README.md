@@ -20,4 +20,5 @@ python manage.py migrate
 python manage.py runserver
 ```
 - Go to the URL specified in the terminal. It will be something like `127.0.0.1:port_number`
+  
 **Note- Use a strong password for the user**
